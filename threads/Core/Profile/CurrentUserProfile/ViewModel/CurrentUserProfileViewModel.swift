@@ -7,6 +7,8 @@
 
 import Combine
 import Foundation
+import PhotosUI
+import SwiftUI
 
 class CurrentUserProfileViewModel: ObservableObject {
     @Published var currentUser: User?

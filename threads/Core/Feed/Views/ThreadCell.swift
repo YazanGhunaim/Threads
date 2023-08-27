@@ -43,7 +43,7 @@ struct ThreadCell: View {
                     }
                     
                     // MARK: Caption
-                    Text("Profitable Trader")
+                    Text("Threads > Twitter ?")
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
