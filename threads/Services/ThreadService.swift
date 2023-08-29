@@ -16,4 +16,24 @@ struct ThreadService {
         try await Firestore.firestore().collection("threads").addDocument(data: threadData)
     }
     
+    static func fetchThreads() async throws -> [Thread] {
+        let snapshot = try await Firestore
+            .firestore()
+            .collection("threads")
+            .order(by: "timeStamp", descending: true)
+            .getDocuments()
+        
+        return snapshot.documents.compactMap({try? $0.data(as: Thread.self)})
+    }
+    
+    static func fetchUserThreads(uid: String) async throws -> [Thread] {
+        let snapshot = try await Firestore
+            .firestore()
+            .collection("threads")
+            .whereField("ownerUid", isEqualTo: uid)
+            .getDocuments()
+        
+        let threads = snapshot.documents.compactMap({ try? $0.data(as: Thread.self)})
+        return threads.sorted(by: {$0.timeStamp.dateValue() > $1.timeStamp.dateValue()})
+    }
 }
