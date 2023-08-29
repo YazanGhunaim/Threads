@@ -43,7 +43,9 @@ struct CurrentUserProfileView: View {
                 }
             }
             .sheet(isPresented: $showEditProfile, content: {
-                EditProfileView()
+                if let user = currentUser {
+                    EditProfileView(user: user)
+                }
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
