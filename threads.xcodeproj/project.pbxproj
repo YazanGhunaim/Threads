@@ -10,6 +10,9 @@
 		EA3E99202A9B1D900087EB71 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E991F2A9B1D900087EB71 /* EditProfileViewModel.swift */; };
 		EA3E99222A9B1F560087EB71 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3E99212A9B1F560087EB71 /* ImageUploader.swift */; };
 		EA41EDCB2A9DE47F008A06BD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EA41EDCA2A9DE47F008A06BD /* Kingfisher */; };
+		EA41EDCD2A9DEE2E008A06BD /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41EDCC2A9DEE2E008A06BD /* Thread.swift */; };
+		EA41EDD02A9DF02D008A06BD /* CreateThreadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41EDCF2A9DF02D008A06BD /* CreateThreadViewModel.swift */; };
+		EA41EDD22A9DF051008A06BD /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA41EDD12A9DF051008A06BD /* ThreadService.swift */; };
 		EA71193C2A99CD14008E53B0 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71193B2A99CD14008E53B0 /* ExploreViewModel.swift */; };
 		EA71193E2A99CF3E008E53B0 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71193D2A99CF3E008E53B0 /* PreviewProvider.swift */; };
 		EA71193F2A99D102008E53B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAC6DAFE2A969320001F68B5 /* GoogleService-Info.plist */; };
@@ -50,6 +53,9 @@
 /* Begin PBXFileReference section */
 		EA3E991F2A9B1D900087EB71 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		EA3E99212A9B1F560087EB71 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		EA41EDCC2A9DEE2E008A06BD /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		EA41EDCF2A9DF02D008A06BD /* CreateThreadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadViewModel.swift; sourceTree = "<group>"; };
+		EA41EDD12A9DF051008A06BD /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
 		EA71193B2A99CD14008E53B0 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		EA71193D2A99CF3E008E53B0 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		EA9A4A082A99ED9E001CA523 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
@@ -104,6 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				EA3E991F2A9B1D900087EB71 /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA41EDCE2A9DF01E008A06BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA41EDCF2A9DF02D008A06BD /* CreateThreadViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -203,6 +217,7 @@
 			children = (
 				EADC038C2A973F8B00535E72 /* UserService.swift */,
 				EA3E99212A9B1F560087EB71 /* ImageUploader.swift */,
+				EA41EDD12A9DF051008A06BD /* ThreadService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -210,6 +225,7 @@
 		EAC7B70F2A9654AD00808CC1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA41EDCC2A9DEE2E008A06BD /* Thread.swift */,
 				EADC038A2A973B8700535E72 /* User.swift */,
 			);
 			path = Models;
@@ -328,6 +344,7 @@
 		EAC7B72A2A9661A900808CC1 /* ThreadCreation */ = {
 			isa = PBXGroup;
 			children = (
+				EA41EDCE2A9DF01E008A06BD /* ViewModel */,
 				EAC7B72B2A9661B000808CC1 /* Views */,
 			);
 			path = ThreadCreation;
@@ -527,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAC7B7412A9679E500808CC1 /* ThreadFilter.swift in Sources */,
+				EA41EDCD2A9DEE2E008A06BD /* Thread.swift in Sources */,
 				EADC03812A97272200535E72 /* RegistrationViewModel.swift in Sources */,
 				EAC7B7352A96620A00808CC1 /* ActivityView.swift in Sources */,
 				EADC03832A972FEE00535E72 /* AuthService.swift in Sources */,
@@ -539,6 +557,7 @@
 				EA9A4A112A99F327001CA523 /* UserContentListView.swift in Sources */,
 				EAC7B7392A9663D100808CC1 /* ThreadCell.swift in Sources */,
 				EADC03892A9738AF00535E72 /* LoginViewModel.swift in Sources */,
+				EA41EDD02A9DF02D008A06BD /* CreateThreadViewModel.swift in Sources */,
 				EAC7B71C2A9658A400808CC1 /* ThreadsTextFieldModifier.swift in Sources */,
 				EAC7B73C2A96722700808CC1 /* CircularProfileImageView.swift in Sources */,
 				EA71193C2A99CD14008E53B0 /* ExploreViewModel.swift in Sources */,
@@ -556,6 +575,7 @@
 				EAC7B7292A96617800808CC1 /* ExploreView.swift in Sources */,
 				EAC7B71E2A965BE300808CC1 /* RegistrationView.swift in Sources */,
 				EADC038B2A973B8700535E72 /* User.swift in Sources */,
+				EA41EDD22A9DF051008A06BD /* ThreadService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
